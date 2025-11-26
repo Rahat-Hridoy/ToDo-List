@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do list</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div class="w-full h-screen bg-gray-100 flex flex-col align-content-center">
+      <div
+        class="w-[550px] bg-gray-200 border border-gray-300 px-10 py-8 rounded-xl m-auto"
+      >
+        <h1 class="font-bold text-4xl text-green-700 text-center mb-4">
+          To-Do List
+        </h1>
+        <div>
+          <!-- input field -->
+          <input
+            type="text"
+            name="todo-item"
+            id="inputTask"
+            class="w-full h-12 rounded-md border border-gray-300 bg-white outline-none p-4 mb-4"
+          />
+          <!-- add button -->
+          <div class="text-center mb-6">
+            <button
+              type="button"
+              id="addBtn"
+              class="font-semibold text-lg text-white text-center bg-green-500 w-fit px-5 py-2 rounded-md hover:cursor-pointer active:bg-green-400"
+            >
+              Add Item
+            </button>
+          </div>
+        </div>
+        <!-- list items -->
+        <ul id="todoList"></ul>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
