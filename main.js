@@ -8,7 +8,7 @@ function renderList() {
   todoList.innerHTML = "";
   todos.forEach(function (item) {
     const li = document.createElement("li");
-    li.innerHTML = item + "<span>X</span>";
+    li.innerHTML = item + `<span onclick='removeItem("${item}")'>X</span>`;
     todoList.appendChild(li);
   });
 }
@@ -30,6 +30,13 @@ addBtn.addEventListener(`click`, function () {
   renderList();
   console.log(todos);
 });
+
+// remove item
+function removeItem(itemRemove) {
+  let index = todos.indexOf(itemRemove);
+  todos.splice(index, 1);
+  renderList();
+}
 
 // on Load
 window.onload = function () {
