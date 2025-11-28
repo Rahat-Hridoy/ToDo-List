@@ -8,7 +8,12 @@ function renderList() {
   todoList.innerHTML = "";
   todos.forEach(function (item) {
     const li = document.createElement("li");
-    li.innerHTML = item + `<span onclick='removeItem("${item}")'>X</span>`;
+    li.innerHTML =
+      todos.indexOf(item) +
+      1 +
+      ".  " +
+      item +
+      `<span onclick='removeItem("${item}")'>X</span>`;
     todoList.appendChild(li);
   });
 }
