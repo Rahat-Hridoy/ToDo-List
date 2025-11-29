@@ -28,12 +28,19 @@ function addTask(item) {
   saveToLocalStorage();
 }
 
-// input button
+// input task by mouse
 addBtn.addEventListener(`click`, function () {
   addTask(inputTask.value);
   inputTask.value = "";
   renderList();
-  console.log(todos);
+});
+// input task by keypress
+inputTask.addEventListener("keypress", function (object) {
+  if (object.key === "Enter") {
+    addTask(inputTask.value);
+    inputTask.value = "";
+    renderList();
+  }
 });
 
 // remove item
