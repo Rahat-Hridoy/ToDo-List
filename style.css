@@ -10,7 +10,7 @@ li span {
   text-align: right;
   font-size: 18px;
   font-weight: 500;
-  width: 30px;
+  min-width: 30px;
   height: 30px;
   background: transparent;
   border-radius: 10px;
